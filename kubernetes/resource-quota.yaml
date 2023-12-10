@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: exam-resource-quota
+  namespace: exam
+spec:
+  hard:
+    requests.cpu: "2"  # Limite de CPU pour tous les Pods combinés
+    requests.memory: 2Gi  # Limite de mémoire pour tous les Pods combinés
+    limits.cpu: "4"  # Limite maximale de CPU pour tous les Pods combinés
+    limits.memory: 4Gi  # Limite maximale de mémoire pour tous les Pods combinés
